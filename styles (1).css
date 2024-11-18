@@ -1,0 +1,112 @@
+/* General Styling */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  background: #f5f5dc;
+  color: #3e2723;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #bfa76f;
+}
+
+/* Header Styling */
+header {
+  background: #bfa76f;
+  color: white;
+  padding: 20px 0;
+  border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+/* Beating Heart Section */
+.heart-section {
+  margin: 30px 0;
+}
+
+.heart {
+  width: 100px;
+  height: 90px;
+  background: red;
+  margin: 0 auto;
+  position: relative;
+  animation: beat 1s infinite;
+  transform: rotate(-45deg);
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background: red;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-45deg);
+  }
+}
+
+.heart-section h2 {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #b71c1c;
+}
+
+/* Love Letter Section */
+.love-letter {
+  margin: 30px 0;
+  padding: 20px;
+  background: #fdf5e6;
+  border: 1px solid #d2b48c;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.love-letter h2 {
+  color: #8b4513;
+  margin-bottom: 15px;
+}
+
+.love-letter p {
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background: #bfa76f;
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
